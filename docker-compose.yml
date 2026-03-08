@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  predictive-pulse:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    restart: unless-stopped
